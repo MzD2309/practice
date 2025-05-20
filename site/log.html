@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="./resources/logo.png" alt="Логотип" class="header__logo">
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li><a href="main.html">ГЛАВНАЯ</a></li>
+                    <li><a href="about-project.html">О ПРОЕКТЕ</a></li>
+                    <li><a href="members.html">УЧАСТНИКИ</a></li>
+                    <li><a class="active" href="!#">ЖУРНАЛ</a></li>
+                    <li><a href="links.html">РЕСУРСЫ</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+    <div class="container">
+        <div class="news-container">
+            <!-- Пост 1 -->
+            <div class="news-post">
+                
+                <div class="news-content">
+                    <h2 class="title__formaintext">Завершен первый этап разработки</h2>
+                    <h3 class="annotation__subtitle">Анализ целевой аудитории</h3>
+                    <p class="annotation__desc highlight-text">
+                        Провели серию глубинных интервью с потенциальными пользователями (20-30 человек), 
+                        разделяя их на сегменты: модные энтузиасты, занятые профессионалы, пожилые люди. 
+                        Использовали инструменты типа Hotjar для анализа поведения на аналогичных сервисах. 
+                        Результат: персоны пользователей с детализированными сценариями использования.
+                    </p>
+                    <h3 class="annotation__subtitle">Конкурентный анализ</h3>
+                    <p class="annotation__desc highlight-text">
+                        Исследовали 15+ существующих решений (Stylebook, Cladwell, Amazon Outfit Builder), 
+                        составили сравнительную матрицу по 30 параметрам: точность рекомендаций, интеграция 
+                        с гардеробом, погодная адаптация. Особое внимание уделяли слабым местам конкурентов - 
+                        например, большинство не учитывает влажность воздуха при подборе. Как итог выделили следующие 
+                        пункты: Выводы: 80% аналогов не используют погодные данные, нет персонализации под 
+                        существующий гардероб, упущена интеграция с календарем (подбор под события).
+                    </p>
+                    <h3 class="annotation__subtitle">UX-исследование:</h3>
+                    <p class="annotation__desc highlight-text">70% пользователей хотят видеть альтернативные варианты комплектов</p>
+                    <p class="annotation__desc highlight-text">85% предпочитают ручную коррекцию автоматических подборов</p>
+                    <p class="annotation__desc highlight-text">Основная сложность - фотографирование существующего гардероба</p>
+                    <p class="member-position">15 сентября 2024</p>
+                </div>
+            </div>
+
+            <!-- Пост 2 -->
+            <div class="news-post">
+                <div class="news-image">
+                    <img src="./resources/прототип интерфейса.jpg" alt="Разработка прототипа">
+                </div>
+                <div class="news-content">
+                    <h2 class="title__formaintext">Разработка прототипа</h2>
+                    <h3 class="annotation__subtitle">Ключевые этапы</h3>
+                    <p class="annotation__desc highlight-text">
+                        Дизайнер создал интерактивные прототипы интерфейса в Figma, отрабатывая 
+                        основные сценарии использования. Разработчик построил 
+                        архитектуру системы, настроил интеграцию с погодными API и 
+                        разработал базовый алгоритм подбора одежды. Исследователь собрал 
+                        начальный датасет изображений одежды, аналитик спроектировал систему тегов 
+                        и категорий. 
+                        Команда провела первые usability-тесты прототипа, корректируя функционал.
+                    </p>
+                    
+            
+                    <p class="member-position">6 декабря 2024</p>
+                </div>
+            </div>
+
+            <!-- Пост 3 -->
+            <div class="news-post">
+                <div class="news-content">
+                    <h2 class="title__formaintext">Определение ключевого функционала MVP</h2>
+                    <h3 class="annotation__subtitle">Основные функции</h3>
+                    <p class="annotation__desc highlight-text">
+                        Разработка MVP для нейрофоторамки, подбирающей одежду под погоду и другие факторы, 
+                        начинается с определения ключевого функционала, который должен включать 
+                        базовые возможности для проверки основной гипотезы продукта. Первоочередная 
+                        задача - реализовать механизм добавления предметов гардероба, позволяющий 
+                        пользователям загружать фотографии своей одежды через камеру или галерею, с 
+                        возможностью ручного добавления атрибутов, таких как тип одежды, цветовая гамма 
+                        и сезонность. Параллельно интегрируются погодные API (OpenWeatherMap или AccuWeather) для получения актуальных данных о температуре, 
+                        осадках и УФ-индексе, которые будут основными факторами для подбора одежды.
+                    </p>
+                    <h3 class="annotation__subtitle">Техническая реализация</h3>
+                    <p class="annotation__desc highlight-text">
+                        На техническом уровне MVP строится на стеке Python (Django/FastAPI) для backend-части 
+                        с использованием PostgreSQL в качестве базы данных. Для искусственного интеллекта 
+                        применяются TensorFlow/Keras для компьютерного зрения и анализа изображений одежды, 
+                        а также Scikit-learn для базовой системы рекомендаций. Фронтенд-часть включает 
+                        веб-панель на React.js и мобильное приложение на Kotlin/Swift, связанные с backend 
+                        через REST API и WebSocket для оперативного обновления данных. Архитектура системы 
+                        представляет собой связку фоторамки с мобильным приложением и веб-интерфейсом, 
+                        которые взаимодействуют с единым backend, обращающимся к ML-моделям и погодным сервисам.
+                    </p>
+                    <h3 class="annotation__subtitle">Финальная демо-версия MVP</h3>
+                    <p class="annotation__desc highlight-text">
+                        Финальная демо-версия MVP включает возможность добавления 10-15 предметов одежды, 
+                        подбор образов для трех основных погодных сценариев (холодная погода ниже 10°C, 
+                        теплая погода 15-25°C и дождливые условия), а также базовый интерфейс фоторамки. 
+                        Алгоритм рекомендаций работает по принципу фильтрации гардероба в зависимости от 
+                        текущих погодных условий, используя простые правила для начальной версии. 
+                        После релиза MVP собирается обратная связь для дальнейшего улучшения алгоритма, 
+                        планируется добавление интеграции с календарем для учета событий при подборе одежды и 
+                        совершенствование компьютерного зрения для лучшего распознавания тканей и фасонов. 
+                        Ниже представлен скриншот работы программы.
+                    </p>
+                    <p class="member-position">13 апреля 2025</p>
+                </div>
+            </div>
+            <img src="./resources/фоторамка_скрин.png" alt="Прототип нейрофоторамки" class="img__prototype">
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer__container">
+                <!-- Первая секция - логотип и контакты -->
+                <div class="footer-section">
+                    <img src="./resources/mospolytech-logo-white.svg" width="300px" alt="Основной логотип" class="logo">
+                    <div class="footer-links">
+                        <a href="mailto:mospolytech@mospolytech.ru">mospolytech@mospolytech.ru</a>
+                        <a href="https://mospolytech.ru/" target="_blank">mospolytech.ru/</a>
+                        <a href="tel:+7 (495) 276-37-36" target="_blank">+7 (495) 276-37-36</a>
+                    </div>
+                </div>
+                
+                <!-- Вторая секция - меню -->
+                <div class="footer-section">
+                    <nav class="footer-menu">
+                        <a href="main.html">ГЛАВНАЯ</a>
+                        <a href="about-project.html">О ПРОЕКТЕ</a>
+                        <a href="members.html">УЧАСТНИКИ</a>
+                        <a class="active" href="#!">ЖУРНАЛ</a>
+                        <a href="links.html">РЕСУРСЫ</a>
+                    </nav>
+                </div>
+                
+                <!-- Третья секция - второй логотип и контакты -->
+                <div class="footer-section">
+                    <p class="logo-texel">TEXEL</p>
+                    <div class="footer-links">
+                        <a href="mailto:i@texel.graphics">i@texel.graphics</a>
+                        <a href="https://texel.graphics/ru/" target="_blank">texel.graphics/ru/</a>
+                        <a href="tel:+7 (495) 018-39-35" target="_blank">+7 (495) 018-39-35</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
